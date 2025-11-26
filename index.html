@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>就活無双3資格ロードマップ｜世界OS勉強法</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="元エンジニア×税理士法人勤務×難関資格受験中の世界OSオタクが、大学生向けに「就活無双3資格（宅建・簿記・ITパスポート）」のロードマップと勉強法を無料公開。"
+  />
+
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-soft: #0b1020;
+      --accent: #3b82f6;
+      --accent-soft: rgba(59, 130, 246, 0.12);
+      --accent-strong: #2563eb;
+      --text: #f9fafb;
+      --text-soft: #d1d5db;
+      --border: #1f2937;
+      --danger: #ef4444;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.45);
+      --shadow-chip: 0 8px 24px rgba(15, 23, 42, 0.7);
+      --max-width: 960px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top, #111827 0, #020617 60%, #020617 100%);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 24px 20px 80px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 0, #60a5fa, #1d4ed8 40%, #020617 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-chip);
+      font-size: 18px;
+      font-weight: 700;
+      color: #e5e7eb;
+    }
+
+    .logo-text-main {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .logo-text-sub {
+      font-size: 11px;
+      color: var(--text-soft);
+    }
+
+    .header-tagline {
+      font-size: 11px;
+      color: var(--text-soft);
+      text-align: right;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.9));
+      border-radius: 24px;
+      padding: 22px 18px 22px;
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 26px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background:
+        radial-gradient(circle at 0 0, rgba(59, 130, 246, 0.18) 0, transparent 55%),
+        radial-gradient(circle at 100% 0, rgba(147, 51, 234, 0.16) 0, transparent 55%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .hero-badge {
+      font-size: 11px;
+      border-radius: 999px;
+      padding: 3px 10px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.8);
+      color: var(--text-soft);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .hero-badge strong {
+      color: #e5e7eb;
+    }
+
+    .hero-title {
+      font-size: 23px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      margin: 0 0 10px;
+    }
+
+    .hero-title span.accent {
+      color: var(--accent);
+    }
+
+    .hero-subtitle {
+      margin: 0 0 16px;
+      font-size: 13px;
+      color: var(--text-soft);
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .hero-point {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      font-size: 12px;
+      color: var(--text-soft);
+    }
+
+    .hero-point-icon {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      color: #f9fafb;
+      box-shadow: 0 18px 40px rgba(37, 99, 235, 0.5);
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.03);
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text-soft);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(15, 23, 42, 1);
+    }
+
+    .hero-note {
+      font-size: 11px;
+      color: var(--text-soft);
+      margin-top: 8px;
+    }
+
+    /* SECTIONS */
+    section {
+      margin-bottom: 28px;
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(30, 64, 175, 0.3);
+      padding: 16px 16px 18px;
+    }
+
+    section.light {
+      border-color: rgba(148, 163, 184, 0.3);
+      background: rgba(15, 23, 42, 0.96);
+    }
+
+    section h2 {
+      font-size: 17px;
+      margin: 0 0 6px;
+      letter-spacing: 0.03em;
+    }
+
+    section h2 span {
+      color: var(--accent);
+    }
+
+    section p {
+      font-size: 13px;
+      margin: 6px 0;
+      color: var(--text-soft);
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0 4px;
+    }
+
+    .pill {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      color: var(--text-soft);
+    }
+
+    ul {
+      padding-left: 18px;
+      margin: 6px 0;
+    }
+
+    li {
+      font-size: 13px;
+      color: var(--text-soft);
+      margin: 4px 0;
+    }
+
+    .highlight-card {
+      border-radius: var(--radius-md);
+      border: 1px dashed rgba(148, 163, 184, 0.7);
+      padding: 10px 11px;
+      margin-top: 10px;
+      background: rgba(15, 23, 42, 0.9);
+      font-size: 12px;
+    }
+
+    .highlight-card strong {
+      color: #e5e7eb;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .faq-item {
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(51, 65, 85, 0.9);
+      padding: 9px 10px;
+      margin-top: 8px;
+      background: rgba(15, 23, 42, 0.9);
+      font-size: 12px;
+    }
+
+    .faq-q {
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+
+    .faq-a {
+      color: var(--text-soft);
+    }
+
+    /* FORM */
+    .form-card {
+      margin-top: 8px;
+      border-radius: 18px;
+      border: 1px solid rgba(37, 99, 235, 0.5);
+      padding: 14px 12px 16px;
+      background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.2), transparent 60%),
+                  rgba(15, 23, 42, 0.98);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .form-row {
+      margin-bottom: 10px;
+    }
+
+    .form-row label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+
+    .form-row small {
+      display: block;
+      font-size: 11px;
+      color: var(--text-soft);
+      margin-top: 2px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid rgba(75, 85, 99, 0.9);
+      padding: 7px 9px;
+      background: rgba(15, 23, 42, 0.95);
+      color: var(--text);
+      font-size: 13px;
+      outline: none;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.5);
+    }
+
+    textarea {
+      min-height: 70px;
+      resize: vertical;
+    }
+
+    .options-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 14px;
+      font-size: 12px;
+    }
+
+    .options-group label {
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+    }
+
+    .options-group input[type="checkbox"],
+    .options-group input[type="radio"] {
+      accent-color: var(--accent);
+      cursor: pointer;
+    }
+
+    .form-note {
+      font-size: 11px;
+      color: var(--text-soft);
+      margin-top: 4px;
+    }
+
+    .btn-submit {
+      width: 100%;
+      margin-top: 8px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: none;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      color: #f9fafb;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 20px 40px rgba(37, 99, 235, 0.6);
+    }
+
+    .btn-submit:hover {
+      filter: brightness(1.04);
+      transform: translateY(-1px);
+    }
+
+    .submit-hint {
+      font-size: 11px;
+      color: var(--text-soft);
+      margin-top: 6px;
+    }
+
+    footer {
+      margin-top: 28px;
+      font-size: 11px;
+      color: #6b7280;
+      text-align: center;
+    }
+
+    footer span {
+      color: #9ca3af;
+    }
+
+    @media (min-width: 720px) {
+      .page {
+        padding: 32px 16px 80px;
+      }
+
+      .hero {
+        padding: 26px 24px 26px;
+      }
+
+      .hero-title {
+        font-size: 26px;
+      }
+
+      .hero-subtitle {
+        font-size: 14px;
+      }
+
+      .hero-points {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      section {
+        padding: 18px 18px 20px;
+      }
+
+      .two-col {
+        grid-template-columns: 1.3fr 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <div class="logo">
+        <div class="logo-mark">OS</div>
+        <div>
+          <div class="logo-text-main">就活無双3資格</div>
+          <div class="logo-text-sub">世界OS勉強法ラボ</div>
+        </div>
+      </div>
+      <div class="header-tagline">
+        元エンジニア × 税理士法人勤務<br />
+        難関資格受験中の世界OSオタク
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <div class="hero-badge-row">
+          <div class="hero-badge"><strong>大学生向け</strong> 就活・資格ロードマップ</div>
+          <div class="hero-badge">宅建 / 簿記 / ITパスポート / Excel</div>
+        </div>
+
+        <h1 class="hero-title">
+          学歴フツーでも、<span class="accent">就活無双モード</span>に入る。<br />
+          「就活無双3資格」×「世界OS勉強法」
+        </h1>
+        <p class="hero-subtitle">
+          元エンジニア → 税理士法人勤務。国立工学部ロボット専攻、塾講師経験あり、<br />
+          宅建・簿記・ITパス・MOS持ち、税理士＆司法書士受験中の僕が、<br />
+          大学生のために「就活で本当に武器になる3資格」のロードマップを無料公開します。
+        </p>
+
+        <div class="hero-points">
+          <div class="hero-point">
+            <div class="hero-point-icon">①</div>
+            <div>TOEICとインターンだけに全振りしなくても、<br />就活で語れる武器を3つ持つ方法が分かる。</div>
+          </div>
+          <div class="hero-point">
+            <div class="hero-point-icon">②</div>
+            <div>文系・理系・学年ごとに違う「ベストな順番」と勉強ペースを具体的に提示。</div>
+          </div>
+          <div class="hero-point">
+            <div class="hero-point-icon">③</div>
+            <div>暗記が苦手でも回せる「世界OS勉強法」で、3資格をまとめて理解。</div>
+          </div>
+          <div class="hero-point">
+            <div class="hero-point-icon">④</div>
+            <div>希望者は、無料で30分のオンライン相談（Zoom）もご案内します。</div>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#form" class="btn-primary">無料ロードマップを受け取る</a>
+          <a href="#about" class="btn-ghost">まず詳しい内容を見る</a>
+        </div>
+        <div class="hero-note">
+          ※入力は30秒ほど。登録後すぐにPDFダウンロードURLをメールでお送りします。
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: ABOUT -->
+    <section id="about" class="light">
+      <h2><span>こんな大学生</span>に来てほしい</h2>
+      <p>
+        「とりあえずTOEICとインターン」「周りが動き出して焦るけど、何からやればいいか分からない」。そんな大学生に向けたロードマップです。
+      </p>
+      <ul>
+        <li>就活がなんとなく不安だけど、具体的な一歩が決められていない</li>
+        <li>陽キャでもなく、ガクチカを盛れるほどのエピソードがない</li>
+        <li>学歴に自信がなく、「どうせ学歴フィルターで…」と思ってしまう</li>
+        <li>宅建・簿記・ITパスに興味はあるが、「全部やるのはキツそう」と感じている</li>
+        <li>暗記が苦手で、テキストを開くとすぐ閉じたくなるタイプ</li>
+      </ul>
+
+      <div class="highlight-card">
+        <strong>結論：</strong>  
+        陰キャでも、学歴フツーでも、<br />
+        <strong>「就活無双3資格」×「世界OS勉強法」</strong>を入れておけば、<br />
+        面接で話すネタと、自信のある軸をちゃんと持てます。
+      </div>
+    </section>
+
+    <!-- SECTION: ROADMAP -->
+    <section id="roadmap">
+      <h2><span>就活無双3資格</span>って何？</h2>
+      <p>
+        僕が「大学生のコスパ最強セット」と考えているのが、この3つです。
+      </p>
+
+      <div class="pill-list">
+        <span class="pill">宅建：契約と法律のリテラシー</span>
+        <span class="pill">簿記：お金と数字のリテラシー</span>
+        <span class="pill">ITパスポート：IT・DXのリテラシー</span>
+        <span class="pill">＋ Excel（MOS）：実務で即使える武器</span>
+      </div>
+
+      <p>
+        これらを「バラバラの資格」として暗記で取ろうとすると、途中で挫折します。  
+        逆に、<strong>「世界OS」＝共通の構造</strong>から理解して、
+        <strong>一枚のマップの上に3資格を載せていく</strong>と、負担が一気に下がります。
+      </p>
+
+      <div class="highlight-card">
+        <strong>この無料ロードマップでは：</strong>
+        <ul>
+          <li>大学1〜4年生それぞれの「ベストな進め方」</li>
+          <li>文系／理系ごとのおすすめ優先順位</li>
+          <li>バイト・サークルと両立する現実的な勉強時間の目安</li>
+          <li>「まずは2つだけでOK」なパターンの見分け方</li>
+        </ul>
+        を具体的にまとめています。
+      </div>
+    </section>
+
+    <!-- SECTION: ABOUT ME -->
+    <section id="me" class="light">
+      <h2><span>講師プロフィール</span>（takeshi）</h2>
+
+      <div class="two-col">
+        <div>
+          <p><strong>元エンジニア → 税理士法人勤務。世界OSオタクです。</strong></p>
+          <ul>
+            <li>国立工学部ロボット専攻（理系）</li>
+            <li>エンジニアとしてIT現場を経験</li>
+            <li>現在は税理士法人で、中小企業や個人事業主の数字の世界にどっぷり</li>
+            <li>税理士・司法書士試験に挑戦中</li>
+            <li>宅建士合格 / 日商簿記 / ITパスポート / MOS Excel 上級</li>
+            <li>塾講師として、中高生〜大学受験生まで指導経験あり</li>
+          </ul>
+          <p>
+            「工学 × IT × 会計・税金 × 法律」を全部またいできた結果、<br />
+            <strong>勉強も仕事も「OS（構造）から入ると全部つながる」</strong>という感覚を掴みました。
+          </p>
+          <p>
+            この感覚を、<strong>大学生の就活と資格勉強にそのまま応用したのが「就活無双3資格 × 世界OS勉強法」</strong>です。
+          </p>
+        </div>
+        <div>
+          <div class="highlight-card">
+            <strong>普通の「資格講師」と違うところ</strong>
+            <ul>
+              <li>現役で税理士法人の「中の人」として働いている</li>
+              <li>エンジニア経験があり、ITやAIにも抵抗がない</li>
+              <li>「暗記ゴリ押し」ではなく、OSから理解する勉強法を使っている</li>
+              <li>塾講師経験があり、「勉強が苦手な層」の気持ちが分かる</li>
+            </ul>
+            <p>
+              だからこそ、<br />
+              <strong>「ガチ勢向け」ではなく「怠惰で勉強嫌いでも就活無双したい人向け」</strong>の内容になっています。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: GIFTS -->
+    <section id="gift">
+      <h2>無料で受け取れるもの</h2>
+
+      <div class="highlight-card">
+        <p><strong>🎁 無料特典①：就活無双3資格ロードマップPDF</strong></p>
+        <ul>
+          <li>大学1〜4年それぞれの「今からできる最善手」</li>
+          <li>文系／理系／既卒ごとのおすすめ資格の組み合わせ</li>
+          <li>宅建／簿記／ITパスを「どの順番で」取るのがコスパ良いか</li>
+          <li>1週間あたりの勉強時間の目安と、スケジュール例</li>
+          <li>世界OS勉強法の超入門（暗記を減らす考え方）</li>
+        </ul>
+      </div>
+
+      <div class="highlight-card">
+        <p><strong>🎁 無料特典②：30分 無料オンライン相談（希望者のみ）</strong></p>
+        <ul>
+          <li>あなたの学年・学部・今の状況を聞いた上で、ロードマップをカスタマイズ</li>
+          <li>宅建・簿記・ITパス以外の資格についての相談もOK</li>
+          <li>「どの資格から・どのペースで・何を捨てるか」を一緒に設計</li>
+        </ul>
+        <p>
+          売り込み目的ではなく、<br />
+          <strong>「とりあえず方向性を言語化したい人」のための枠</strong>なので、安心して使ってください。
+        </p>
+      </div>
+
+      <p style="margin-top:10px;">
+        下のフォームから登録いただくと、<br />
+        すぐにPDFダウンロードURLと、相談希望者へのご案内メールをお送りします。
+      </p>
+      <a href="#form" class="btn-primary">フォームへ進む</a>
+    </section>
+
+    <!-- SECTION: FAQ -->
+    <section id="faq" class="light">
+      <h2>よくある質問</h2>
+
+      <div class="faq-item">
+        <div class="faq-q">Q. 1年生ですが、まだ早くないですか？</div>
+        <div class="faq-a">
+          むしろ一番コスパが良いタイミングです。  
+          3〜4年でインターンや本番の就活が忙しくなる前に、
+          <strong>「就活で語れる武器」</strong>を仕込んでおきましょう。
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Q. 全部の資格を取る前提ですか？</div>
+        <div class="faq-a">
+          いいえ。人によっては<strong>2つで十分なパターン</strong>もあります。  
+          文系・理系・志望業界によってベストな組み合わせは違うので、  
+          ロードマップPDFと無料相談では、あなたの状況に合わせて優先順位を決めていきます。
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Q. 勉強が苦手でもついていけますか？</div>
+        <div class="faq-a">
+          僕自身、暗記ゴリ押しタイプではありません。  
+          世界OS勉強法は、<strong>「構造から理解して、暗記量を減らす」</strong>やり方なので、  
+          勉強が苦手な人ほど試してほしいです。
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Q. 料金は本当に無料ですか？</div>
+        <div class="faq-a">
+          はい、PDFと30分のオンライン相談（希望者のみ）は無料です。  
+          もし将来的に有料の講座や個別サポートを案内する場合も、  
+          <strong>勝手に課金されることは一切ありません。</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: FORM -->
+    <section id="form">
+      <h2><span>就活無双3資格ロードマップ</span>を受け取る</h2>
+      <p>
+        下のフォームに入力していただくと、<br />
+        <strong>就活無双3資格ロードマップPDF</strong>のダウンロードURLをメールでお送りします。
+      </p>
+
+      <div class="form-card">
+        <!-- ▼ ここをあなたが使うフォームサービスのURLに差し替えてください ▼ -->
+        <form
+          action="https://example.com/your-form-endpoint"
+          method="post"
+        >
+          <div class="form-row">
+            <label for="name">お名前（ニックネーム可）<span style="color: var(--danger);">＊</span></label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-row">
+            <label for="email">メールアドレス<span style="color: var(--danger);">＊</span></label>
+            <input type="email" id="email" name="email" required />
+            <small>PDFダウンロードURLをこちらにお送りします。</small>
+          </div>
+
+          <div class="form-row">
+            <label for="grade">学年<span style="color: var(--danger);">＊</span></label>
+            <select id="grade" name="grade" required>
+              <option value="">選択してください</option>
+              <option value="1">大学1年</option>
+              <option value="2">大学2年</option>
+              <option value="3">大学3年</option>
+              <option value="4">大学4年</option>
+              <option value="m">大学院生</option>
+              <option value="g">既卒／社会人</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label>文系／理系<span style="color: var(--danger);">＊</span></label>
+            <div class="options-group">
+              <label><input type="radio" name="field" value="文系" required />文系</label>
+              <label><input type="radio" name="field" value="理系" />理系</label>
+              <label><input type="radio" name="field" value="その他" />どちらとも言えない／専門系</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label>現在持っている資格（複数選択可）</label>
+            <div class="options-group">
+              <label><input type="checkbox" name="qualifications" value="none" />まだ何も持っていない</label>
+              <label><input type="checkbox" name="qualifications" value="english" />英検／TOEICなど英語系</label>
+              <label><input type="checkbox" name="qualifications" value="boki" />日商簿記</label>
+              <label><input type="checkbox" name="qualifications" value="takken" />宅建</label>
+              <label><input type="checkbox" name="qualifications" value="itpass" />ITパスポート</label>
+              <label><input type="checkbox" name="qualifications" value="mos" />MOS</label>
+              <label><input type="checkbox" name="qualifications" value="other" />その他</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label>興味のあるテーマ（複数選択可）</label>
+            <div class="options-group">
+              <label><input type="checkbox" name="interests" value="takken" />宅建</label>
+              <label><input type="checkbox" name="interests" value="boki" />簿記</label>
+              <label><input type="checkbox" name="interests" value="itpass" />ITパスポート</label>
+              <label><input type="checkbox" name="interests" value="excel" />Excel・MOS</label>
+              <label><input type="checkbox" name="interests" value="career" />就活全体の戦略</label>
+              <label><input type="checkbox" name="interests" value="study" />勉強法（世界OS勉強法）</label>
+              <label><input type="checkbox" name="interests" value="other" />その他</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="concern">今、一番不安に感じていること・相談したいこと<span style="color: var(--danger);">＊</span></label>
+            <textarea id="concern" name="concern" required placeholder="例）学歴に自信がない／何から始めればいいか分からない など"></textarea>
+            <small>ざっくりでOKです。後の相談やコンテンツ作成の参考にさせていただきます。</small>
+          </div>
+
+          <div class="form-row">
+            <label>30分無料相談の希望<span style="color: var(--danger);">＊</span></label>
+            <div class="options-group">
+              <label><input type="radio" name="consult" value="希望する" required />希望する（Zoom／音声通話どちらでも可）</label>
+              <label><input type="radio" name="consult" value="興味あるが今回はPDFのみ" />興味はあるが今回はPDFだけ欲しい</label>
+              <label><input type="radio" name="consult" value="PDFのみ" />今回はPDFのみでOK</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="time">無料相談を希望する方：だいたいの希望曜日・時間帯</label>
+            <textarea id="time" name="time" placeholder="例）平日18〜21時／土日午前中 など。ざっくりで構いません。"></textarea>
+          </div>
+
+          <div class="form-row">
+            <label>このページをどこで知りましたか？</label>
+            <div class="options-group">
+              <label><input type="radio" name="source" value="tiktok" />TikTok</label>
+              <label><input type="radio" name="source" value="x" />X（Twitter）</label>
+              <label><input type="radio" name="source" value="friend" />友人の紹介</label>
+              <label><input type="radio" name="source" value="other" />その他</label>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-submit">
+            無料ロードマップを受け取る
+          </button>
+          <div class="submit-hint">
+            ※送信後、入力いただいたメールアドレスにPDFのダウンロードURLを送付します。<br />
+            届かない場合は迷惑メールフォルダもご確認ください。
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <span>就活無双3資格 × 世界OS勉強法</span><br />
+      &copy; <!-- 年はご自由に変更してください --> 2025 takeshi
+    </footer>
+  </div>
+</body>
+</html>
